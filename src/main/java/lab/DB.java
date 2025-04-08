@@ -79,7 +79,7 @@ public class DB {
 
         try(Session session = SF.openSession()) {
 
-            String HQL = "from Word";
+            String HQL = "from Word order by id asc";
             Query query = session.createQuery(HQL);
             return query.getResultList();
 
@@ -89,5 +89,20 @@ public class DB {
             return null;
         }
 
+    }
+
+    public static List<Word> fetchWords(String word) {
+        try(Session session = SF.openSession()) {
+
+            String HQL = "from Word where word like ?1 order by id asc";
+            Query query = session.createQuery(HQL);
+            query.setParameter(1,word);
+            return query.getResultList();
+
+        }catch (Exception e){
+            System.out.println("Something wrong in DB class, fetchWords method");
+            System.err.println(e);
+            return null;
+        }
     }
 }

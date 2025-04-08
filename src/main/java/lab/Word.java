@@ -2,6 +2,8 @@ package lab;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -32,16 +34,28 @@ public class Word {
         return translations;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setTranslations(List<String> translations) {
-        this.translations = translations;
+        if(this.translations == null){
+            this.translations = new ArrayList<>();
+        }
+        this.translations.addAll(translations);
+    }
+
+    public void setTranslations(String[] translations) {
+        if(this.translations == null){
+            this.translations = new ArrayList<>();
+        }
+        this.translations.addAll(Arrays.asList(translations));
     }
 
     @Override
     public String toString() {
-        return "Word{" +
-                "id=" + id +
-                ", word='" + word + '\'' +
-                ", translations=" + translations +
-                '}';
+        return "id=" + id +
+                "; word='" + word + '\'' +
+                "; translations=" + translations;
     }
 }
