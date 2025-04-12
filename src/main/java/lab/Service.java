@@ -281,10 +281,12 @@ public class Service {
                 check = 0;
                 do{
                     counter = 5;
-                    idObj = idObj % (words.size()-1);
-                    idObj++;
-                    currentWord = words.get(idObj);
+                    if(idObj > words.size() - 1){
+                        idObj = 0;
+                    }
 
+                    currentWord = words.get(idObj);
+                    idObj++;
                     System.out.println("---The word is: "+currentWord.getWord());
                     do{
                         if(!currentWord.getTranslations().contains(guess) && !guess.isEmpty()) {
@@ -324,10 +326,11 @@ public class Service {
                 check = 0;
                 do{
                     counter = 5;
-                    idObj = idObj % (words.size()-1);
-                    idObj++;
+                    if(idObj > words.size() - 1){
+                        idObj = 0;
+                    }
                     currentWord = words.get(idObj);
-
+                    idObj++;
                     System.out.println("---The translations are: "+currentWord.getTranslations());
                     do{
                         if(!currentWord.getWord().equalsIgnoreCase(guess) && !guess.isEmpty()) {
