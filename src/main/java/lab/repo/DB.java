@@ -1,5 +1,6 @@
-package lab;
+package lab.repo;
 
+import lab.model.Word;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

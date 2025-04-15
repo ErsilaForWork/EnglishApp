@@ -1,4 +1,4 @@
-package lab;
+package lab.model;
 
 import jakarta.persistence.*;
 

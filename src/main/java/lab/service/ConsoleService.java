@@ -1,10 +1,11 @@
-package lab;
+package lab.service;
 
-import org.w3c.dom.ls.LSOutput;
+import lab.model.Word;
+import lab.repo.DB;
 
 import java.util.*;
 
-public class Service {
+public class ConsoleService {
     private static final Scanner sc = new Scanner(System.in);
 
     private static int inputInt() {

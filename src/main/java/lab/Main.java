@@ -1,5 +1,7 @@
 package lab;
 
+import lab.service.ConsoleService;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,19 +11,19 @@ public class Main {
         int choice;
         String word;
         do{
-            choice = Service.makeChoice();
+            choice = ConsoleService.makeChoice();
 
             switch (choice) {
                 case 1:
-                    Service.addWord();
+                    ConsoleService.addWord();
                     break;
                 case 2:
                     System.out.print("Enter the word that you want to change: ");
                     word = sc.nextLine();
-                    Service.updateWords(word);
+                    ConsoleService.updateWords(word);
                     break;
                 case 3:
-                    Service.learnWords();
+                    ConsoleService.learnWords();
                     break;
                 default:
                     break;
