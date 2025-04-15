@@ -8,9 +8,11 @@ This app is used to learn English Words and based on Hibernate ORM, here I used 
 
 3) Go to the file src/main/resources/hibernate.cfg.xml
 
-4) In the hibernate.cfg.xml file update properties
-    hibernate.connection.url
-    hibernate.connection.username
-    hibernate.connection.password
+4) In the hibernate.cfg.xml file update properties:
+    hibernate.connection.url;
+    hibernate.connection.username;
+    hibernate.connection.password;
 
-5) And after that you can easily run the main method and enjoy from learning English =)
+5) Make sure that your IDE downloaded all External Libraries from POM.xml file;
+
+6) And after that you can easily run the main method and enjoy from learning English =)
