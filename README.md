@@ -1,5 +1,7 @@
 This app is used to learn English Words and based on Hibernate ORM, here I used PostgreSQL and to run this application you have to do some configuration first;
 
+Project in work(Special for NFactorial): https://youtu.be/7g05JoWMQps
+
 1) Install pgAdmin by this tutor 
     Windows : https://www.youtube.com/watch?v=GpqJzWCcQXY&t=336s
     Mac OS : https://www.youtube.com/watch?v=fy-42clnbmc
